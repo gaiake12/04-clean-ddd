@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { Slug } from "./value-objects/slug";
+import { Entity } from "../../core/entities/entity";
 
 interface QuestionProps {
   title: string;
@@ -8,18 +9,4 @@ interface QuestionProps {
   slug: Slug;
 }
 
-class Question {
-  id: string;
-  public title: string;
-  public content: string;
-  public authorId: string;
-  public slug: Slug;
-
-  constructor({ title, content, authorId, slug }: QuestionProps, id?: string) {
-    this.id = id ?? randomUUID();
-    this.title = title;
-    this.slug = slug;
-    this.content = content;
-    this.authorId = authorId;
-  }
-}
+class Question extends Entity<QuestionProps> {}
