@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { Slug } from "./values-objects/slug";
+import { Slug } from "./value-objects/slug";
 
 interface QuestionProps {
   title: string;
