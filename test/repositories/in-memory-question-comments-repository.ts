@@ -21,8 +21,6 @@ export class InMemoryQuestionCommentsRepository
 
   async findById(id: string) {
     const questionComment = this.items.find((item) => {
-      console.log(item.id.toString())
-
       return item.id.toString() === id
     })
 
