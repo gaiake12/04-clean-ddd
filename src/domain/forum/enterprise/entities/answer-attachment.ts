@@ -7,7 +7,7 @@ interface AnswerAttachemntProps {
 }
 
 export class AnswerAttachemnt extends Entity<AnswerAttachemntProps> {
-  get quesitonId() {
+  get answerId() {
     return this.props.answerId
   }
 
